@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "PORT=8080 node cap5/completeNodeServerWithDataChannel.js",
+    "start": "node cap5/completeNodeServerWithDataChannel.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
