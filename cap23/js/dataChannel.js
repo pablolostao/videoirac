@@ -79,8 +79,6 @@ function onSignalingError(error) {
 function sendData() {
 	var data = document.getElementById("dataChannelSend").value;
 	sendChannel.send(data);
-	document.getElementById("dataChannelReceive").value = document.getElementById("dataChannelSend").value +"\n"+  event.data;
-	document.getElementById("dataChannelSend").value = '';
 	log('Sent data: ' + data);
 }
 

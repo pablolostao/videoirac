@@ -51,11 +51,20 @@
 		<div class="last">18:55</div>
 	</div>
 
-	<input class="textarea" type="text" placeholder="Type here!"  id="dataChannelReceive"/><div class="emojis"></div>
-	<input class="textarea" type="text" placeholder="Type here!" id="dataChannelSend"/><div class="emojis"></div>
+	<textarea   id="dataChannelReceive" disabled></textarea>
+	
+<input class="textarea1" type="text" placeholder="Type here!" id="dataChannelSend" onkeyup="pulsar(event);"/><div class="emojis"></div>
 	<button id="sendButton">Send</button>
+	
 <script src='/socket.io/socket.io.js'></script>
 <script src='js/completeNodeClientWithDataChannel.js'></script>
-
+<script>
+	function pulsar(e) {
+    if (e.keyCode === 13 && !e.shiftKey) {
+        e.preventDefault();
+        document.getElementById("sendButton").click();
+    }
+}
+</script>
 </body>
 </html>

@@ -242,7 +242,10 @@ function createPeerConnection() {
 
 // Data channel management
 function sendData() {
+  
   var data = sendTextarea.value;
+  receiveTextarea.value += data + '\n';
+	document.getElementById("dataChannelSend").value = '';
   if(isInitiator) sendChannel.send(data);
   else receiveChannel.send(data);
   trace('Sent data: ' + data);
@@ -260,7 +263,7 @@ function gotReceiveChannel(event) {
 
 function handleMessage(event) {
   trace('Received message: ' + event.data);
-  receiveTextarea.value += event.data + '\n';
+  receiveTextarea.value += event.data + '\n                                          ';
 }
 
 function handleSendChannelStateChange() {
