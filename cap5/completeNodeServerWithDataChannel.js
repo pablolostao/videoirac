@@ -1,6 +1,6 @@
 var static = require('node-static');
 
-var https = require('https');
+var https = require('http');
 
 // Change directory to path of current JavaScript program
 // var process = require('process');
