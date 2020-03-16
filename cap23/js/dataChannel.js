@@ -79,6 +79,8 @@ function onSignalingError(error) {
 function sendData() {
 	var data = document.getElementById("dataChannelSend").value;
 	sendChannel.send(data);
+	document.getElementById("dataChannelReceive").value = document.getElementById("dataChannelSend").value +"\n"+  event.data;
+	document.getElementById("dataChannelSend").value = '';
 	log('Sent data: ' + data);
 }
 
@@ -166,7 +168,7 @@ function gotReceiveChannel(event) {
 function handleMessage(event) {
 	log('Received message: ' + event.data);
 	// Show message in the HTML5 page
-	document.getElementById("dataChannelReceive").value = event.data;
+	document.getElementById("dataChannelReceive").value = document.getElementById("dataChannelReceive").value +"\n"+  event.data;
 	// Clean 'Send' text area in the HTML page
 	document.getElementById("dataChannelSend").value = '';
 }

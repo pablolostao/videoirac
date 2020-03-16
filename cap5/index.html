@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>Very simple WebRTC application with a Node.js signalling server</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 <h1>Bienvenido al sitio del equipo 36</h1>
@@ -25,7 +26,7 @@
 				<video id="remoteVideo" autoplay></video>
 			</td>
 		</tr>
-		<tr>
+		<!-- <tr>
 			<td align="center">
 				<textarea rows="4" cols="60" id="dataChannelSend" disabled
 			placeholder="This will be enabled once the data channel is up..."></textarea>
@@ -36,13 +37,23 @@
 		</tr>
 		<tr>
 			<td align="center">
-				<button id="sendButton" disabled>Send</button>
+				
 			</td>
 			<td></td>
-		</tr>
+		</tr> -->
 	</table>
-</div>
+	<!-- <textarea rows="4" cols="60" id="dataChannelSend" disabled></textarea>
+	<textarea rows="4" cols="60" id="dataChannelReceive" disabled></textarea> -->
+	
+	<div class="menu">
+		<div class="back"><i class="fa fa-chevron-left"></i> <img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+		<div class="name">Juan Lluva</div>
+		<div class="last">18:55</div>
+	</div>
 
+	<input class="textarea" type="text" placeholder="Type here!"  id="dataChannelReceive"/><div class="emojis"></div>
+	<input class="textarea" type="text" placeholder="Type here!" id="dataChannelSend"/><div class="emojis"></div>
+	<button id="sendButton">Send</button>
 <script src='/socket.io/socket.io.js'></script>
 <script src='js/completeNodeClientWithDataChannel.js'></script>
 
